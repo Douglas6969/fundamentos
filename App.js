@@ -1,5 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { Box } from './components/box';
 
 export default function App() {
   return (
@@ -12,34 +12,14 @@ export default function App() {
 
       <View style={styles.lista}>
 
-        <View style={[styles.box1, { backgroundColor: '#FFA4A4' }]}>
-          <Text style={[styles.box, { color: '#C62222' }]}>Animais</Text>
-        </View>
-
-        <View style={[styles.box1, { backgroundColor: '#EDA4FF' }]}>
-          <Text style={[styles.box, { color: '#7422C6' }]}>carros</Text>
-        </View>
-
-        <View style={[styles.box1, { backgroundColor: '#A4D4FF' }]}>
-          <Text style={[styles.box, { color: '#2277C6' }]}>Peixe</Text>
-        </View>
-
-        <View style={[styles.box1, { backgroundColor: '#A4FFC3' }]}>
-          <Text style={[styles.box, { color: '#22C646' }]}>Times</Text>
-        </View>
-
-        <View style={[styles.box1, { backgroundColor: '#D1D6D3' }]}>
-          <Text style={[styles.box, { color: '#434A44' }]}>Filmes</Text>
-        </View>
-
-        <View style={[styles.box1, { backgroundColor: '#E8EFBD' }]}>
-          <Text style={[styles.box, { color: '#747D10' }]}>Linguagem</Text>
-        </View>
-
+        <Box corFundo='#FFA4A4' corLetra='#C62222' texto='Animais' />
+        <Box corFundo='#EDA4FF' corLetra='#7422C6' texto='Caros' />
+        <Box corFundo='#A4D4FF' corLetra='#2277C6' texto='Peixe' />
+        <Box corFundo='#A4FFC3' corLetra='#22C646' texto='Times' />
+        <Box corFundo='#D1D6D3' corLetra='#434A44' texto='Filmes' />
+        <Box corFundo='#E8EFBD' corLetra='#747D10' texto='Linguagem' />
 
       </View>
-
-
 
     </View>
   );
@@ -64,18 +44,5 @@ const styles = StyleSheet.create({
   lista: {
     padding: 10,
     width: '100%'
-  },
-  box1: {
-    alignItems: 'center',
-    paddingVertical: 15,
-    margin:6
-  },
-  box: {
-    paddingVertical: 20,
-    fontWeight: 'bold',
-    fontSize: 25,
   }
-
-
-
 });
